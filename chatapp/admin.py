@@ -5,13 +5,13 @@ from .models import Chat, Room
 
 # Register your models here.
 class ChatAdmin(admin.ModelAdmin):
-    list_display = ['message', 'user', 'created_at', 'updated_at']
-    fields = ['message', 'user']
+    list_display = ['id', 'message', 'user','room', 'created_at', 'updated_at']
+    fields = ['message', 'user', 'room']
 
 
 class RoomAdmin(admin.ModelAdmin):
-    list_display = ['name', 'created_at', 'updated_at']
-    fields = ['name','chat']
+    list_display = ['id' ,'name', 'created_at', 'updated_at']
+    fields = ['name',]
 
 
 admin.site.register(Chat, ChatAdmin)
